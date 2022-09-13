@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.track {
+    padding: 5px;
+      list-style: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: black;
+      width: 100%;
+      border: 1px solid #a0a0a0;
+    width: 24.5%;
+    display: block;
+    color: black;
+    line-height: 50px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently */
+}
+.track:hover {
+    background-color: #ff4d4d;
+    color: white;
+    transition: 0.2s;
+}
+.track-in-list {
+    padding: 5px;
+    border-bottom: 1px solid #a0a0a0;
+  background-color: #f1f1f1;
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    width: 100%;
+    transition: 0.4s;
+}
+.track-in-list:hover {
+    background-color: #d4d4d4;
+    transition: 0.4s;
+}
+.current {
+    background-color: #ff4d4d;
+    color: white;
+}
+.current:hover {
+    background-color: #ff4d4d;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    position: absolute;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader-container{
+    background: red;
+    width: 100%;
+    min-height: 100%;
+}
+.sidenav {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently */
+    background-color: #f1f1f1;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 80%;
+    margin: 0;
+    font-size: 0px;
+    min-width: 20%;
+    padding: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+.player {
+    position: fixed;
+    top: 5%;
+    left: 30%;
+}
+.button {
+    background-color: #777777;
+    transition: 0.4s;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+  }
+.button:hover {
+    background-color: #555555;
+    transition: 0.4s;
+}
+.greenBtn {
+    background-color: #57dd6e;
+}
+.greenBtn:hover {
+    background-color: #48b65a;
+}
+
+.searchBtn{
+    margin-left: -1%;
+}
+.menu {
+    margin: 0;
+    display: inline-block;
+    width: 50%;
+  }
+  
+  .search {
+      margin-left: 40px;
+      display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 1em;
+    width: 30%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .search:hover, .search:focus {
+    border: 1px solid #009688;
+    background-color: white;
+  }
+#queueList {
+    padding: 0;
+}
+.player-container{
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 20px;
+}

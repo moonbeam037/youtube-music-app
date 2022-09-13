@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/public/css/mobile.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="main" style="display: none;">
+        <div class="menu">
+            <% if (!blocked) { %>
+                <button class="button" id="lock-button">Стать хостом</button>
+            <% } else if (blocker) { %>
+                <button class="button greenBtn" id="lock-button">Вы хост</button>
+
+            <% } %>
+            <button class="button" onclick="openNav()" id="slideButton">Список песен</button>
+            <div class="search-container">
+            <input class="search" placeholder="Найти музыку..." id="getQuery" type="text" >
+            <button class="button searchBtn" id="searchButton">
+                Найти
+            </button>  
+        </div>
+        <button class="button dangerBtn" style="display: none;" id="clearVideoListBtn">Убрать список</button>
+        </div>
+        <ul id="videoList">
+        </ul>
+        
+        <% if (blocker) { %>
+            <div style="display: none;" id="player-container">
+            <div class="player">
+            </div>
+                <button id="player"></button>
+                <button id="previous">previous</button>
+                <button id="pause">pause</button>
+                <button id="next">next</button>
+                <button id="shuffle">shuffle</button>
+            </div>
+        <% } %>
+        <div id="sidenav" class="sidenav">
+            <button class="button" onclick="closeNav()">Закрыть</button>
+            <ul id="queueList">
+            </ul>
+        </div>
+        <script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
+        <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script defer src="public/js/script.js"></script>
+    </div>
+    </div>
+</body>
+</html>

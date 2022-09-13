@@ -1,0 +1,22 @@
+{
+  "name": "youtube-music-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "screenres": "^2.0.1",
+    "socket.io": "^4.3.2"
+  }
+}

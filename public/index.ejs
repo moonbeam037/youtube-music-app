@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Main</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="main" style="display: none;">
+        <div class="menu">
+            <% if (!blocked) { %>
+                <button class="button" id="lock-button">Стать хостом</button>
+            <% } else if (blocker) { %>
+                <button class="button greenBtn" id="lock-button">Вы хост</button>
+
+            <% } %>
+                <input class="search" placeholder="Найти музыку..." id="getQuery" type="text" >
+            <button class="button searhBtn" id="searchButton">
+                Найти
+            </button>  
+        </div>
+        
+        <% if (blocker) { %>
+            <div class="player-container">
+            <div class="player">
+            </div>
+                <button id="player"></button>
+                <button style="margin-left: 33%" class="button" id="previous">◀</button>
+                <button class="button" id="pause">||</button>
+                <button class="button" id="next">▶</button>
+                <button  class="button" id="shuffle">Перемешать</button>
+                <button class="button" style="color: red" id="clearQueue">ОЧИСТИТЬ ОЧЕРЕДЬ</button>
+            </div>
+                <% } %>
+                <ul id="videoList">
+                </ul>
+        <div class="sidenav">
+            
+            <ul id="queueList">
+            </ul>
+        </div>
+        <script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
+        <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script defer src="public/js/script.js"></script>
+    </div>
+    </div>
+</body>
+
+</html>
